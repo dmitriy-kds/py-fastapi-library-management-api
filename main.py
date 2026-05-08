@@ -5,9 +5,11 @@ from sqlalchemy.orm import Session
 
 import crud
 import schemas
-from database import get_db
+from database import get_db, engine
+from models import Base
 
 app = FastAPI()
+Base.metadata.create_all(bind=engine)
 
 @app.get("/")
 def root():
