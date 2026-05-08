@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 
 import crud
 import schemas
-from db.database import get_db
+from database import get_db
 
 app = FastAPI()
 
